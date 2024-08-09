@@ -1,0 +1,62 @@
+.item {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    margin-right: 24px;
+
+    .image {
+        border-radius: 4px 4px 0 0;
+    }
+
+    .description {
+        min-height: 150px;
+        background-color: #FDF8F5;
+        border-radius: 0 0 4px 4px;
+        padding: 12px;
+
+        .name {
+            margin-bottom: 8px;
+            font-weight: 700;
+            font-size: 14px;
+        }
+
+        .about {
+            font-weight: 500;
+            font-size: 12px;
+            margin-bottom: 8px;
+        }
+
+        .amenities {
+            display: flex;
+            flex-wrap: wrap;
+
+            .amenity {
+                background-color: #FFFFFF;
+                border-radius: 18px;
+                padding: 3px 8px 3px 8px;
+                border: 1px solid black;
+                margin-bottom: 8px;
+                margin-right: 8px;
+            }
+        }
+
+        .priceAndLocation {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .location {
+                font-weight: 400;
+                font-size: 12px;
+            }
+
+            .price {
+                background-color: #FAEBE3;
+                border-radius: 4px;
+                padding: 3px 6px 3px 6px;
+                font-weight: 500;
+                font-size: 12px;
+            }
+        }
+    }
+}

@@ -2,9 +2,10 @@ import style from './Arrow.module.css'
 
 interface ArrowProps {
     direction: 'left' | 'right'
+    onClick?: () => void
 }
 
-const Arrow = ({ direction }: ArrowProps) => {
+const Arrow = ({ direction, onClick }: ArrowProps) => {
     const transform = direction === 'left' ? 'rotate(0deg)' : 'rotate(180deg)'
 
     return (
@@ -16,6 +17,7 @@ const Arrow = ({ direction }: ArrowProps) => {
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
             style={{ transform }}
+            onClick={onClick}
         >
             <rect width="24" height="24" rx="12" fill="black" />
             <path

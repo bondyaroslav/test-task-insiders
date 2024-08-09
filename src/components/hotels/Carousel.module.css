@@ -1,0 +1,24 @@
+/* Carousel.module.css */
+.wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.mainContainer {
+    width: 80vw;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.window {
+    height: 100%;
+    width: 100%;
+}
+
+.allPagesContainer {
+    height: 100%;
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+}

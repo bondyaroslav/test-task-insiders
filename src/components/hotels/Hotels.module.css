@@ -1,0 +1,11 @@
+.hotels {
+    margin-bottom: 48px;
+
+    .hotelsWrapper {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        width: 80vw;
+        overflow-y: hidden;
+    }
+}
