@@ -1,0 +1,33 @@
+.selectWrapper {
+    width: 80vw;
+    background-color: #F5DACC;
+    padding: 16px;
+    box-sizing: border-box;
+    margin-bottom: 50px;
+}
+
+.customSelect {
+    width: 100%;
+    height: 45px;
+    border-radius: 4px;
+    background-color: #FFFFFF;
+    padding: 12px;
+    box-sizing: border-box;
+}
+
+.menuItem {
+    height: 48px;
+    background-color: #FFFFFF;
+    border-radius: 4px;
+    margin-bottom: 6px;
+    margin-left: 12px;
+    margin-right: 12px;
+}
+
+.menuItem:first-child {
+    margin-top: 6px;
+}
+
+.menuItem:hover {
+    background-color: #FAEBE3;
+}
