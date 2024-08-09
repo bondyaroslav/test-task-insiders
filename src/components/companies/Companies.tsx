@@ -8,13 +8,13 @@ import CompanyItem from '@/components/companies/CompanyItem'
 
 const Companies = () => {
     return (
-        <div className={style.companiesWrapper}>
-            <CompanyItem href="https://www.svenskttenn.com/us/en/" image={svnkst}/>
-            <CompanyItem href="https://www.yasuragi.se/en/" image={yasuragi}/>
-            <CompanyItem href="https://www2.marimekko.com/us_en" image={marimeko}/>
-            <CompanyItem href="https://www.louispoulsen.com/en-us/private" image={louis}/>
-            <CompanyItem href="/" image={global}/>
-        </div>
+        <section className={style.companiesWrapper}>
+            <CompanyItem href="https://www.svenskttenn.com/us/en/" image={svnkst} height={21}/>
+            <CompanyItem href="https://www.yasuragi.se/en/" image={yasuragi} height={120}/>
+            <CompanyItem href="https://www2.marimekko.com/us_en" image={marimeko} height={19}/>
+            <CompanyItem href="https://www.louispoulsen.com/en-us/private" image={louis} height={61}/>
+            <CompanyItem href="https://www.globalknives.uk/" image={global} height={110}/>
+        </section>
     )
 }
 
