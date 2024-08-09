@@ -1,0 +1,31 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    height: 32px;
+    margin-bottom: 16px;
+
+    .category {
+        font-family: Satoshi, sans-serif;
+        font-weight: 700;
+        font-size: 24px;
+    }
+
+    .buttonsWrapper {
+        display: flex;
+        align-items: center;
+
+        .button {
+            font-family: Satoshi, sans-serif;
+            font-weight: 700;
+            font-size: 16px;
+            color: #000000;
+            margin-right: 16px;
+        }
+
+        .arrows {
+            display: flex;
+            justify-content: space-between;
+            width: 56px;
+        }
+    }
+}

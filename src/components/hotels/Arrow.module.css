@@ -1,0 +1,12 @@
+.arrow {
+    cursor: pointer;
+    transition: fill 0.2s;
+}
+
+.arrow:hover {
+    opacity: 0.8;
+}
+
+.arrow:active path {
+    fill: #FFC107;
+}
