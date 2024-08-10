@@ -1,40 +1,41 @@
 'use client'
-import React, { Children, cloneElement, useEffect, useState } from 'react'
+import React from 'react'
+import { Box } from '@mui/material'
 import style from './Carousel.module.css'
 
-const PAGE_WIDTH = 20 * window.innerWidth
+interface CarouselProps {
+    children: React.ReactNode
+    offset: number
+    itemsPerPage: number
+}
 
-const Carousel = ({ children, offset }: any) => {
-    const [pages, setPages] = useState([])
-
-    useEffect(() => {
-        setPages(
-            Children.map(children, child => {
-                return cloneElement(child, {
-                    style: {
-                        height: '100%',
-                        minWidth: `${PAGE_WIDTH}px`,
-                        maxWidth: `${PAGE_WIDTH}px`,
-                    }
-                })
-            })
-        )
-    }, [children])
-
+const Carousel = ({ children, offset, itemsPerPage }: CarouselProps) => {
     return (
-        <div className={style.wrapper}>
-            <div className={style.mainContainer}>
-                <div className={style.window}>
-                    <div className={style.allPagesContainer}
-                         style={{
-                             transform: `translateX(${offset}px)`
-                         }}
+        <Box className={style.wrapper}>
+            <Box className={style.mainContainer}>
+                <Box className={style.window}>
+                    <Box
+                        className={style.allPagesContainer}
+                        style={{
+                            transform: `translateX(${offset}px)`,
+                            transition: 'transform 0.3s ease-out',
+                            display: 'flex',
+                        }}
                     >
-                        {pages}
-                    </div>
-                </div>
-            </div>
-        </div>
+                        {React.Children.map(children, (child) => (
+                            <Box
+                                className={style.childrenWrapper}
+                                style={{
+                                    width: 250
+                                }}
+                            >
+                                {child}
+                            </Box>
+                        ))}
+                    </Box>
+                </Box>
+            </Box>
+        </Box>
     )
 }
 

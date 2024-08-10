@@ -1,24 +1,34 @@
-/* Carousel.module.css */
 .wrapper {
-    display: flex;
-    align-items: center;
+    width: 100%;
+    padding: 0;
+    margin: 0;
 }
 
 .mainContainer {
-    width: 80vw;
-    height: 300px;
-    display: flex;
-    align-items: center;
-    overflow: hidden;
+    width: 100%;
+    padding: 0;
+    margin: 0;
 }
 
 .window {
-    height: 100%;
     width: 100%;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
 }
 
 .allPagesContainer {
-    height: 100%;
     display: flex;
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-out;
+    width: 80vw;
+    padding: 0;
+    margin: 0;
+}
+
+.childrenWrapper {
+    margin-right: 24px;
+}
+
+.childrenWrapper:last-child {
+    margin-right: 0;
 }

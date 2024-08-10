@@ -3,9 +3,9 @@
 
     .hotelsWrapper {
         display: flex;
-        justify-content: space-between;
+        /*justify-content: space-between;*/
         flex-wrap: wrap;
-        width: 80vw;
+        /*width: 80vw;*/
         overflow-y: hidden;
     }
 }

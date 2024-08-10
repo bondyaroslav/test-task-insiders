@@ -6,7 +6,11 @@ import Option from '@/components/select/Option'
 
 type IconName = 'Star' | 'BeachAccess' | 'Storefront' | 'Business' | 'Waves' | 'HistoryEdu' | 'Apartment'
 
-const CustomSelect = () => {
+type CustomSelectProps = {
+    onCategoryChange: (category: string) => void
+}
+
+const CustomSelect = ({ onCategoryChange }: CustomSelectProps) => {
     const categories: { name: string; icon: IconName }[] = [
         { name: 'Luxury', icon: 'Star' },
         { name: 'Resort', icon: 'BeachAccess' },
@@ -17,10 +21,12 @@ const CustomSelect = () => {
         { name: 'Contemporary', icon: 'Apartment' },
     ]
 
-    const [selectedCategory, setSelectedCategory] = useState('')
+    const [selectedCategory, setSelectedCategory] = useState('CATEGORY')
 
     const handleChange = (event: SelectChangeEvent) => {
-        setSelectedCategory(event.target.value)
+        const category = event.target.value
+        setSelectedCategory(category)
+        onCategoryChange(category)
     }
 
     return (
@@ -31,13 +37,20 @@ const CustomSelect = () => {
                     value={selectedCategory}
                     onChange={handleChange}
                     className={style.customSelect}
+                    sx={{
+                        boxShadow: 'none',
+                        '.MuiOutlinedInput-notchedOutline': { border: 0 },
+                        '& .MuiSvgIcon-root': { color: 'black' },
+                        '& .MuiOutlinedInput-input': { p: 0 },
+                        '& .MuiMenuItem-root': { padding: 0 },
+                    }}
                     MenuProps={{
                         PaperProps: {
                             style: {
                                 width: '75vw',
                                 overflowY: 'auto',
                                 marginTop: 8,
-                                backgroundColor: '#FDF8F5'
+                                backgroundColor: '#FDF8F5',
                             },
                         },
                         disableScrollLock: true,
@@ -48,7 +61,6 @@ const CustomSelect = () => {
                             className={style.menuItem}
                             key={index}
                             value={category.name}
-
                         >
                             <Option
                                 icon={category.icon}
