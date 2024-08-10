@@ -4,7 +4,7 @@ import { Box } from '@mui/material'
 import HotelItem from '@/components/hotels/HotelItem'
 import { IHotel } from '@/types/IHotel'
 import Carousel from './Carousel'
-import Navbar from '@/components/hotels/Navbar'
+import Navbar from '@/components/hotels/navbar/Navbar'
 import style from './Hotels.module.css'
 
 const Hotels = ({ hotels, categoryName }: { hotels: IHotel[], categoryName: string }) => {

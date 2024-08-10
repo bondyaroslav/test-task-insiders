@@ -1,6 +1,6 @@
 import { Box, Button } from '@mui/material'
 import style from './Navbar.module.css'
-import Arrow from '@/components/hotels/Arrow'
+import Arrow from '@/components/hotels/navbar/Arrow'
 
 interface NavbarProps {
     categoryName: string

@@ -1,6 +1,6 @@
 'use client'
 import { useState } from 'react'
-import { Box, FormControl, MenuItem, Select, SelectChangeEvent } from '@mui/material'
+import { Box, FormControl, InputLabel, MenuItem, Select, SelectChangeEvent } from '@mui/material'
 import style from './CustomSelect.module.css'
 import Option from '@/components/select/Option'
 

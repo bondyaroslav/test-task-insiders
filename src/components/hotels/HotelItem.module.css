@@ -7,6 +7,7 @@
 
 .imageWrapper {
     position: relative;
+    height: 150px;
 }
 
 .image {
@@ -66,6 +67,14 @@
     border: 1px solid black;
     margin-bottom: 8px;
     margin-right: 8px;
+}
+
+.amenity:hover {
+    transition: 0.3s;
+    background-color: #000000;
+    border: 1px solid grey;
+    color: white;
+    cursor: pointer;
 }
 
 .priceAndLocation {
