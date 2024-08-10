@@ -55,7 +55,7 @@
     }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 500px) {
     .logoWrapper {
         padding: 5px !important;
     }

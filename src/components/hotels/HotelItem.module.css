@@ -2,61 +2,87 @@
     display: flex;
     flex-direction: column;
     width: 250px;
-    margin-right: 24px;
+    position: relative;
+}
 
-    .image {
-        border-radius: 4px 4px 0 0;
-    }
+.imageWrapper {
+    position: relative;
+}
 
-    .description {
-        min-height: 150px;
-        background-color: #FDF8F5;
-        border-radius: 0 0 4px 4px;
-        padding: 12px;
+.image {
+    border-radius: 4px 4px 0 0;
+}
 
-        .name {
-            margin-bottom: 8px;
-            font-weight: 700;
-            font-size: 14px;
-        }
+.button {
+    position: absolute;
+    width: 91px;
+    height: 34px;
+    top: 12px;
+    right: 12px;
+    padding: 8px 16px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Satoshi, sans-serif;
+    font-weight: 700;
+    font-size: 10px;
+    text-wrap: nowrap;
+}
 
-        .about {
-            font-weight: 500;
-            font-size: 12px;
-            margin-bottom: 8px;
-        }
+.description {
+    min-height: 150px;
+    background-color: #FDF8F5;
+    border-radius: 0 0 4px 4px;
+    padding: 12px;
+}
 
-        .amenities {
-            display: flex;
-            flex-wrap: wrap;
+.name {
+    margin-bottom: 8px;
+    font-weight: 700;
+    font-size: 14px;
+}
 
-            .amenity {
-                background-color: #FFFFFF;
-                border-radius: 18px;
-                padding: 3px 8px 3px 8px;
-                border: 1px solid black;
-                margin-bottom: 8px;
-                margin-right: 8px;
-            }
-        }
+.about {
+    font-weight: 500;
+    font-size: 12px;
+    margin-bottom: 8px;
+}
 
-        .priceAndLocation {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+.amenities {
+    display: flex;
+    flex-wrap: wrap;
+}
 
-            .location {
-                font-weight: 400;
-                font-size: 12px;
-            }
+.amenity {
+    background-color: #FFFFFF;
+    border-radius: 18px;
+    padding: 3px 8px;
+    border: 1px solid black;
+    margin-bottom: 8px;
+    margin-right: 8px;
+}
 
-            .price {
-                background-color: #FAEBE3;
-                border-radius: 4px;
-                padding: 3px 6px 3px 6px;
-                font-weight: 500;
-                font-size: 12px;
-            }
-        }
-    }
+.priceAndLocation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.location {
+    font-weight: 400;
+    font-size: 12px;
+}
+
+.price {
+    background-color: #FAEBE3;
+    border-radius: 4px;
+    padding: 3px 6px;
+    font-weight: 500;
+    font-size: 12px;
 }
