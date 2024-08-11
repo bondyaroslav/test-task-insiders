@@ -57,22 +57,24 @@
 
 @media (max-width: 500px) {
     .logoWrapper {
-        padding: 5px !important;
+        padding: 12px !important;
     }
 
     .logoText {
         font-size: 12px !important;
-        margin-left: 3px !important;
+        margin-left: 6px !important;
     }
 
     .buttonsWrapper {
-        margin-right: 10px !important;
+        margin-right: 12px !important;
         gap: 5px !important;
+
     }
 
     .ourWeddingButton,
     .signOutButton {
-        width: 80px !important;
+        width: 100px !important;
         height: 50px !important;
+        line-height: 16px;
     }
 }

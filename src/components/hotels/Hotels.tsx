@@ -7,7 +7,12 @@ import Carousel from './Carousel'
 import Navbar from '@/components/hotels/navbar/Navbar'
 import style from './Hotels.module.css'
 
-const Hotels = ({ hotels, categoryName }: { hotels: IHotel[], categoryName: string }) => {
+interface HotelsProps {
+    hotels: IHotel[]
+    categoryName: string
+}
+
+const Hotels = ({ hotels, categoryName }: HotelsProps) => {
     const [offset, setOffset] = useState(0)
     const [itemsPerPage, setItemsPerPage] = useState(1)
     const carouselRef = useRef<HTMLDivElement>(null)

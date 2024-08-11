@@ -79,5 +79,4 @@ export const myHotels: IHotel[] = [
     { id: 72, name: 'Elegance Inn', location: 'Poltava, Ukraine', image: hotel1, pricePerNight: 145, category: 'Contemporary', amenities: ['Spa'], about: 'Luxury with a personal touch' },
     { id: 73, name: 'Sunny Days Resort', location: 'Zaporizhzhia, Ukraine', image: hotel2, pricePerNight: 120, category: 'Contemporary', amenities: ['Beach Access'], about: 'Great for corporate events' },
     { id: 74, name: 'Sunny Days Resort', location: 'Zaporizhzhia, Ukraine', image: hotel2, pricePerNight: 120, category: 'Contemporary', amenities: ['Beach Access'], about: 'Great for corporate events' }
-
 ]

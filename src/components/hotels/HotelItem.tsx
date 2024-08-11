@@ -1,10 +1,19 @@
-import { IHotel } from '@/types/IHotel'
+'use client'
+import { useState } from 'react'
 import Image from 'next/image'
-import style from './HotelItem.module.css'
 import { Box, Button } from '@mui/material'
-import heart from '../../assets/hotels/heart.svg'
+import { IHotel } from '@/types/IHotel'
+import style from './HotelItem.module.css'
+import heart from '../../assets/hotels/icons/defaultHeart.svg'
+import redHeart from '../../assets/hotels/icons/redHeart.svg'
 
 const HotelItem = ({name, location, image, pricePerNight, amenities, about}: IHotel) => {
+    const [isAdded, setIsAdded] = useState(false)
+
+    const handleButtonClick = () => {
+        setIsAdded(!isAdded)
+    }
+
     return (
         <article className={style.item}>
             <Box className={style.imageWrapper}>
@@ -15,8 +24,8 @@ const HotelItem = ({name, location, image, pricePerNight, amenities, about}: IHo
                     height={150}
                     alt={'img'}
                 />
-                <Button className={style.button}>
-                    <Image src={heart} alt={'img'} style={{margin: 5}}/>
+                <Button className={style.button} onClick={handleButtonClick}>
+                    <Image src={isAdded ? redHeart : heart} alt={'img'} style={{ margin: 5 }} />
                     LÄGG TILL
                 </Button>
             </Box>
