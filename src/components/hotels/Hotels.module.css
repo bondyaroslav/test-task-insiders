@@ -3,9 +3,15 @@
 
     .hotelsWrapper {
         display: flex;
-        /*justify-content: space-between;*/
+        justify-content: center;
         flex-wrap: wrap;
-        /*width: 80vw;*/
         overflow-y: hidden;
+        width: 100%;
+    }
+}
+
+@media (max-width: 450px) {
+    .hotels {
+        width: 80vw;
     }
 }

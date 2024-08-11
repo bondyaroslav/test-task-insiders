@@ -1,6 +1,7 @@
 .navbar {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     height: 32px;
     margin-bottom: 16px;
 
@@ -26,6 +27,17 @@
             display: flex;
             justify-content: space-between;
             width: 56px;
+        }
+    }
+}
+
+@media (max-width: 450px) {
+    .navbar {
+        height: 50px;
+        .buttonsWrapper {
+            .button {
+                margin-right: 0;
+            }
         }
     }
 }
