@@ -1,6 +1,6 @@
 'use client'
 import { useState } from 'react'
-import { Box, FormControl, InputLabel, MenuItem, Select, SelectChangeEvent } from '@mui/material'
+import { Box, FormControl, MenuItem, Select, SelectChangeEvent } from '@mui/material'
 import style from './CustomSelect.module.css'
 import Option from '@/components/select/Option'
 
@@ -21,7 +21,7 @@ const CustomSelect = ({ onCategoryChange }: CustomSelectProps) => {
         { name: 'Contemporary', icon: 'Apartment' },
     ]
 
-    const [selectedCategory, setSelectedCategory] = useState('CATEGORY')
+    const [selectedCategory, setSelectedCategory] = useState('')
 
     const handleChange = (event: SelectChangeEvent) => {
         const category = event.target.value
@@ -33,10 +33,13 @@ const CustomSelect = ({ onCategoryChange }: CustomSelectProps) => {
         <Box className={style.selectWrapper}>
             <FormControl fullWidth>
                 <Select
-                    labelId="select-category-label"
+                    displayEmpty
                     value={selectedCategory}
                     onChange={handleChange}
                     className={style.customSelect}
+                    renderValue={(selected) =>
+                        selected || <p style={{ fontFamily: 'Satoshi, sans-serif', fontWeight: 700, fontSize: '12px' }}>CATEGORY</p>
+                    }
                     sx={{
                         boxShadow: 'none',
                         '.MuiOutlinedInput-notchedOutline': { border: 0 },
